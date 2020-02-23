@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="app_version">version 1.0.1</string>
+    <string name="button_msg">你点我呀~</string>
+    <string name="text_today">今天值日滴小可爱是</string>
+    <string name="text_yesterday">昨天值日滴小可爱是</string>
+    <string name="text_tomorrow">明天值日滴小可爱是</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
