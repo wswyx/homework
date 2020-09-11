@@ -6,13 +6,22 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-<com.google.android.material.tabs.TabLayout
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E63CB371" />
+
+
+    <com.google.android.material.tabs.TabLayout
     android:id="@+id/tablayout"
     android:background="@color/colorPrimary"
     app:tabTextColor="#ffffff"
     app:tabSelectedTextColor="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="50dp"/>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_viewpager"
         android:layout_width="match_parent"

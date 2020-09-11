@@ -1,20 +1,30 @@
 package com.example.myapplication;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.myapplication.ViewPager.ImageFragment;
+import com.example.myapplication.ViewPager.ImageThreeFragment;
+import com.example.myapplication.ViewPager.ImageTwoFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
+
+    private Toolbar toolbar;
 
     ViewPager viewPager;
    TabLayout tabLayout;
@@ -45,6 +55,12 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
+
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
     }
 
@@ -84,4 +100,16 @@ public class ViewPagerActivity extends AppCompatActivity {
         }
     }
 
+
+
+    //设置Toolbar(返回)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId()==android.R.id.home){
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
